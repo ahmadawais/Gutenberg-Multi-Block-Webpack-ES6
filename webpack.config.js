@@ -43,7 +43,9 @@ const editBlocksCSSPlugin = new ExtractTextPlugin( {
 const extractConfig = {
 	use: [
 		// "postcss" loader applies autoprefixer to our CSS.
-		{ loader: 'raw-loader' },
+		{
+			loader: 'raw-loader',
+		},
 		{
 			loader: 'postcss-loader',
 			options: {
@@ -67,8 +69,7 @@ const extractConfig = {
 			options: {
 				// Add common CSS file for variables and mixins.
 				data: '@import "./src/common.scss";\n',
-				outputStyle:
-					'production' === process.env.NODE_ENV ? 'compressed' : 'nested',
+				outputStyle: 'production' === process.env.NODE_ENV ? 'compressed' : 'nested',
 			},
 		},
 	],
@@ -83,30 +84,31 @@ module.exports = {
 		path: path.resolve( __dirname ),
 		filename: '[name].js', // [name] = './dist/blocks.build' as defined above.
 	},
-	watch: true,
 	// You may want 'eval' instead if you prefer to see the compiled output in DevTools.
 	devtool: 'cheap-eval-source-map',
 	module: {
-		rules: [
-			{
-				test: /\.(js|jsx|mjs)$/,
-				exclude: /(node_modules|bower_components)/,
-				use: {
-					loader: 'babel-loader',
-				},
+		rules: [ {
+			test: /\.(js|jsx|mjs)$/,
+			exclude: /(node_modules|bower_components)/,
+			use: {
+				loader: 'babel-loader',
 			},
-			{
-				test: /style\.s?css$/,
-				exclude: /(node_modules|bower_components)/,
-				use: blocksCSSPlugin.extract( extractConfig ),
-			},
-			{
-				test: /editor\.s?css$/,
-				exclude: /(node_modules|bower_components)/,
-				use: editBlocksCSSPlugin.extract( extractConfig ),
-			},
+		},
+		{
+			test: /style\.s?css$/,
+			exclude: /(node_modules|bower_components)/,
+			use: blocksCSSPlugin.extract( extractConfig ),
+		},
+		{
+			test: /editor\.s?css$/,
+			exclude: /(node_modules|bower_components)/,
+			use: editBlocksCSSPlugin.extract( extractConfig ),
+		},
 		],
 	},
 	// Add plugins.
 	plugins: [ blocksCSSPlugin, editBlocksCSSPlugin ],
+	stats: 'minimal',
+	// stats: 'errors-only',
+
 };
