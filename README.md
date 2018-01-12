@@ -1,4 +1,8 @@
-# Custom Gutenberg Block
+
+> **[WORK-IN-PROGRESS] Stricly, WIP at the moment. Do NOT use it or announce, share it anywhere until I remove this notice and release it to the public.**
+
+
+# Gutenberg-Multi-Block-Webpack-ES6
 
 This is a basic custom Gutenberg block. Files explained below.
 
@@ -25,4 +29,4 @@ Read the files explained above. All of the files are heavily inline documented. 
 - To watch and build run `npm run dev`
 - To build for production run `npm run build`
 
-# Gutenberg-Multi-Block-Webpack-ES6
+
