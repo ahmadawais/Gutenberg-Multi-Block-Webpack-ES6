@@ -15,7 +15,7 @@
  *        ESNext (new standards of JavaScript) into old JavaScript through a loader
  *        by Babel.
  *
- * Instructions: How to build or develop with this Webpack config:
+ * TODO: Instructions: How to build or develop with this Webpack config:
  *     1. In the command line browse the folder for this plugin where
  *        this `webpack.config.js` file is present.
  *     2. Run the `npm run dev` or `npm run build` for development or
