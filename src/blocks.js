@@ -1,6 +1,7 @@
 /**
- * All blocks related JS & CSS.
+ * Gutenberg Blocks
+ *
+ * All blocks related JavaScript.
  */
 
-import './block-1/block.js';
-import './block-2/block.js';
+import './block/block.js';

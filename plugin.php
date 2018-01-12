@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name: CGB* AA Gutenberg Block
+ * Plugin Name: CGB Gutenberg Block
  * Plugin URI: https://github.com/ahmadawais/create-guten-block/
  * Description: CGB* AA is a Gutenberg block created via create-guten-block.
  * Author: mrahmadawais, maedahbatool
