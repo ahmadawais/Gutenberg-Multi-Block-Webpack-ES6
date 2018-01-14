@@ -4,6 +4,8 @@
 
 # Gutenberg-Multi-Block-Webpack-ES6
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/ahmadawais/Gutenberg-Multi-Block-Webpack-ES6.svg)](https://greenkeeper.io/)
+
 This is a basic custom Gutenberg block. Files explained below.
 
 - [`block.js`](https://github.com/ahmadawais/Gutenberg-Boilerplate/blob/master/block/02-basic-esnext/block.js) — We register Custom Gutenberg block here.
